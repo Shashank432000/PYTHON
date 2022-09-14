@@ -1,0 +1,35 @@
+import random
+computer=int(random.randrange(1,10))
+name=input("what is your name?\n")
+print(f"Hello {name} , Welcome to the game.")
+choice=input(f"Hello {name}, would you like to play the game? y/n:-\n")
+
+if choice=="y":
+    print("Lets Play")
+    played_times=0
+    total_chance=5
+    your_Score=0
+    computer_Score=0
+    while(played_times<total_chance):
+        yourguess=int(input("please choose any number between 1-10:\n "))
+        played_times+=1
+        print(f"you choose {yourguess},computer guess {computer} and")
+        if yourguess>computer:
+            print("you win")
+            your_Score+=1
+        elif yourguess<computer:
+            print("you loose")
+            computer_Score+=1
+        else:
+            print("match tie")
+        
+        
+else:
+    print("exit")
+print(f"your score is {your_Score} & Computer score is {computer_Score}.")
+if your_Score>computer_Score:
+    print("You Won this Match Series")
+elif your_Score<computer_Score:
+    print("You Loose this Match Series")
+else:
+    print("Match Series is Tied")
