@@ -1,0 +1,25 @@
+# Exception Handling
+# try:
+#     (run this code)
+# except:
+#     (excute this code when there are exceotion[error])
+# else:
+#     (run the the code if no exception [error] in code)
+# finally:
+#     (Always run this code)
+
+
+
+def askint():
+    while  True:
+        try:
+            v=int(input("Give a integer value\t"))
+        except Exception as e:
+            print(e)
+        else:
+            break
+        finally:
+            try:
+                print(f"the value of v is : {v}")
+            except Exception as e:
+                print(e)
